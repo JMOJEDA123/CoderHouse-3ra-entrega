@@ -1,0 +1,323 @@
+/* //************************************************************************************************** */
+
+/* Paleta de Colores */
+/* Verde oscuro         #045e2d */
+/* Negro Envejecido     #191919 */
+/* Blanco               #ffffff */
+
+/* ********************************************************************************************************** */
+
+/* CSS Reset */
+* {
+    Margin: 0;
+    Padding: 0;
+    box-sizing: border-box;
+    color: #ffffff
+}
+
+/*************************************************************************************************************
+
+/*HEADER*/
+header {
+    border-top: 15px solid #045e2d;
+    border-bottom: 15px solid #045e2d;
+    background-color: #191919;
+    color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 170px;
+}
+
+/* Contenedor general Header */
+header .header-contenedor {
+    display: flex;
+    flex-direction: row;
+    align-content:space-evenly;
+    align-items: center;
+}
+
+/* Contenedores DIV */
+
+header .logo {
+    width: 20%;
+}
+
+header .titulo-header {
+    width: 40%;
+}
+
+header .botones-registro {
+    width: 15%;
+}
+
+header .favoritos {
+    width: 25%;
+}
+
+header .logo img {
+    width: 80px;
+    height: 80px;
+    padding: 5px;
+}
+
+header .titulo-header h1 {
+    text-shadow: 3px 3px 2px rgba(255, 187, 66, 0.6);
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+header .titulo-header h2 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+header .logo-carrito img  {
+    width: 40px;
+    height: 40px;
+}
+
+header .logo-carrito i {
+    font-size: 30px;
+}
+
+.logo-corazon {
+    color: #ff0303;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.favoritos {
+    display: flex;
+    width: 40px;
+    height: 20px;
+    align-items: center;
+    align-content: center;
+}
+
+/**************************************************************************************************************
+
+/* BODY */
+
+main{
+    background-color: #191919;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 20px;
+}
+
+.contenedor img {
+    width: 280px;
+    height: 260px;
+    /* object-fit: cover; */
+    border-radius: 15px 15px 15px 15px; 
+}
+
+.contenedor-elementos {
+    background-color: #fc7800;
+    box-shadow: 2px 2px 2px 1px rgba(241, 239, 239, 0.918);
+    border-radius: 15px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+.contenedor-elementos:hover {
+    transform: scale(1.05);
+    box-shadow: 3px 3px 2px 1px rgba(240,0,14,0.75);
+    background-color: #045e2d;
+}
+
+.nom-produ {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color:#b80d0d;
+}
+
+.precio-items {
+    font-size: 20;
+    font-weight: 500;
+}
+
+.boton-ver-detalles, .boton-simula-credito{
+    background-color: #191919;
+    width: 100px;
+    height: 35px;
+    border: 1px solid white;
+    border-radius: 8px;
+    box-shadow: 1px 1px 1px 0px white;
+    font-size: 12px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.corazon-favorito {
+    color: #ff0303;
+    cursor: pointer;
+    
+}
+
+#numero {
+    font-size: 20px;
+    color:#ff0303;
+    font-weight: 700;
+}
+
+/* ************************************************************************************************ */
+
+/* Tabla amortizacion */
+
+.titulo-amortizacion {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #045e2d; 
+}
+
+#columnas-tabla-amortizacion {
+    background-color: #b80d0d;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr;
+    grid-template-rows: 50px;
+    font-size: 8px;
+}
+
+.cuerpo-tabla-amortizacion {
+    background-color: #000000;
+    border: 1px solid white;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 2fr;
+    grid-template-rows: 40px;
+    font-size: 5px;
+}
+
+section h1 {
+    font-size: 18px;
+}
+
+section p {
+    font-size: 16px;
+    text-align: center;
+}
+
+.botones-simula {
+    height: 60px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+/* ************************************************************************************************* */
+/* Tablas de caracteristicas */
+
+.Contenedor-Caracteristicas {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    background-color: #fc7800;
+    margin-top: 30px;
+    border-radius: 10px;;
+}
+
+.tabla-caractericas {
+    width: 40vw;
+    margin: 0 auto;
+    padding: 5px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px 50px 50px;
+    column-gap: 10px;
+    row-gap: 25px;
+}
+
+.tabla-caractericas h3 {
+    font-size: 12px;
+    padding: 5px 10px;
+    color: #e7dede;
+    text-align: center;
+}
+
+.tabla-imagen {
+    width: 60vw;
+    position: relative;
+}
+
+.tabla-imagen img {
+    Width: 98%;
+    border-radius: 15px;
+    padding: 8px 0;
+}
+
+.boton-agregar {
+    position: absolute;
+    bottom: 10px;
+    right: 200px;
+    color:#04c90e;
+    font-size: 15px; 
+    font-weight: 500;
+    border-radius: 5px; 
+}    
+
+.tabla-imagen .whatsApp-caracteristicas {
+    position: absolute;
+    bottom: 15px;
+    right: 50px;
+    color: #0b9106;
+    font-size: 30px;
+}
+
+.cerrar {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #ff0303;
+    font-size: 30px;
+}
+
+.titulo-caracteristica {
+    background-color: #191919;
+    border-radius: 5px;
+}
+
+.valor-caracteristica {
+    background-color: rgb(71, 64, 64);
+    border-radius: 5px;
+}
+
+.esconder {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
