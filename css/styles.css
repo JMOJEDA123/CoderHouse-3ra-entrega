@@ -15,6 +15,7 @@
     color: #ffffff
 }
 
+
 /*************************************************************************************************************
 
 /*HEADER*/
@@ -27,14 +28,14 @@ header {
     top: 0;
     z-index: 1;
     width: 100%;
-    height: 170px;
+    height: 190px;
 }
 
 /* Contenedor general Header */
 header .header-contenedor {
     display: flex;
     flex-direction: row;
-    align-content:space-evenly;
+    align-content: space-evenly;
     align-items: center;
 }
 
@@ -49,11 +50,11 @@ header .titulo-header {
 }
 
 header .botones-registro {
-    width: 15%;
+    width: 20%;
 }
 
 header .favoritos {
-    width: 25%;
+    width: 20%;
 }
 
 header .logo img {
@@ -73,7 +74,7 @@ header .titulo-header h2 {
     text-align: center;
 }
 
-header .logo-carrito img  {
+header .logo-carrito img {
     width: 40px;
     height: 40px;
 }
@@ -96,11 +97,19 @@ header .logo-carrito i {
     align-content: center;
 }
 
+.login-usuario {
+    color: white;
+    font-size: 700;
+    text-align: right;
+    padding-right: 30px;
+
+}
+
 /**************************************************************************************************************
 
 /* BODY */
 
-main{
+main {
     background-color: #191919;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -125,7 +134,7 @@ h1 {
     width: 280px;
     height: 260px;
     /* object-fit: cover; */
-    border-radius: 15px 15px 15px 15px; 
+    border-radius: 15px 15px 15px 15px;
 }
 
 .contenedor-elementos {
@@ -135,9 +144,10 @@ h1 {
     text-align: center;
     padding-bottom: 10px;
 }
+
 .contenedor-elementos:hover {
     transform: scale(1.05);
-    box-shadow: 3px 3px 2px 1px rgba(240,0,14,0.75);
+    box-shadow: 3px 3px 2px 1px rgba(240, 0, 14, 0.75);
     background-color: #045e2d;
 }
 
@@ -145,7 +155,7 @@ h1 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 300;
     font-size: 18px;
-    color:#b80d0d;
+    color: #b80d0d;
 }
 
 .precio-items {
@@ -153,7 +163,8 @@ h1 {
     font-weight: 500;
 }
 
-.boton-ver-detalles, .boton-simula-credito{
+.boton-ver-detalles,
+.boton-simula-credito {
     background-color: #191919;
     width: 100px;
     height: 35px;
@@ -168,12 +179,12 @@ h1 {
 .corazon-favorito {
     color: #ff0303;
     cursor: pointer;
-    
+
 }
 
 #numero {
     font-size: 20px;
-    color:#ff0303;
+    color: #ff0303;
     font-weight: 700;
 }
 
@@ -181,42 +192,59 @@ h1 {
 
 /* Tabla amortizacion */
 
-.titulo-amortizacion {
-    height: 30px;
+.input-group { /* funciona bien*/
+    margin: 2px 0;
+    border: 1px solid #191919;
+    border-radius: 5px;
+}
+
+.contenedor-amortizacion { /* funciona bien - NUEVO*/
+    width: 90%;
+    margin: 10px auto;
+    padding: 5px;
+    border: 3px solid red;
+    border-radius: 8px;
+}
+
+
+.titulo-amortizacion { /* funciona bien*/
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #045e2d; 
+    background-color: #045e2d;
+    border-radius: 5px;
 }
 
+
 #columnas-tabla-amortizacion {
-    background-color: #b80d0d;
+    background-color:white; /* Ojo: era blanco*/
+    border-radius: 5px;
+    margin: 5px auto;
+    text-align: center;
+
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr 2fr 2fr;
-    grid-template-rows: 50px;
+    grid-template-columns: 2fr 2fr 3fr 2fr 2fr;
+    grid-template-rows: 40px;
     font-size: 8px;
 }
 
-.cuerpo-tabla-amortizacion {
-    background-color: #000000;
-    border: 1px solid white;
-    text-align: center;
-    display: grid;
-    grid-template-columns: 1fr 2fr 2fr 2fr 2fr;
-    grid-template-rows: 40px;
-    font-size: 5px;
+.supercontenedor h1 { /* funciona bien*/
+    font-size: 30px;
 }
 
-section h1 {
+.supercontenedor h2 { /* funciona bien*/
     font-size: 18px;
 }
 
-section p {
+section p {/* funciona bien*/
     font-size: 16px;
     text-align: center;
+    color: black;
+    font-weight: 500;
 }
 
-.botones-simula {
+.botones-simula {/* funciona bien*/
     height: 60px;
     display: flex;
     justify-content: space-evenly;
@@ -224,71 +252,93 @@ section p {
 }
 
 
+.columnas-tabla { /* funciona bien*/
+    justify-content: center;
+    align-content: center;
+    border-radius: 5px;
+    border: 2px solid black;
+    background-color: #b80d0d;
+    margin: 1px
+}
+
+
+
 /* ************************************************************************************************* */
-/* Tablas de caracteristicas */
 
-.Contenedor-Caracteristicas {
-    width: 80%;
-    margin: 0 auto;
+/* //Ventana modal de detalles */
+
+#modal {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    pointer-events: none;
+    background-color: rgb(0, 0, 0, 0.75);
     display: flex;
-    background-color: #fc7800;
-    margin-top: 30px;
-    border-radius: 10px;;
 }
 
-.tabla-caractericas {
-    width: 40vw;
-    margin: 0 auto;
-    padding: 5px 20px;
+.modal-contenedor {
+    margin: auto;
+    width: 85%;
+    max-width: 800px;
+    max-height: 100%;
+    background-color: #c5baaf;
+    border-radius: 10px;
+    padding: 5px 5px;
+
+
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 50px 50px 50px;
-    column-gap: 10px;
-    row-gap: 25px;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 60px 60px 60px 60px 60px 60px;
+    column-gap: 8px;
+    row-gap: 2px;
 }
 
-.tabla-caractericas h3 {
-    font-size: 12px;
-    padding: 5px 10px;
-    color: #e7dede;
-    text-align: center;
-}
-
-.tabla-imagen {
-    width: 60vw;
-    position: relative;
-}
-
-.tabla-imagen img {
-    Width: 98%;
-    border-radius: 15px;
-    padding: 8px 0;
-}
-
-.boton-agregar {
-    position: absolute;
-    bottom: 10px;
-    right: 200px;
-    color:#04c90e;
-    font-size: 15px; 
-    font-weight: 500;
-    border-radius: 5px; 
-}    
-
-.tabla-imagen .whatsApp-caracteristicas {
-    position: absolute;
-    bottom: 15px;
-    right: 50px;
-    color: #0b9106;
-    font-size: 30px;
+.modal-mostrar {
+    opacity: 1;
+    pointer-events: unset;
 }
 
 .cerrar {
+    cursor: pointer;
     position: absolute;
     top: 15px;
     right: 20px;
     color: #ff0303;
     font-size: 30px;
+}
+
+.tabla-imagen {
+    width: 100%;
+    position: relative;
+    align-content: center;
+    align-items: center;
+}
+
+.tabla-imagen img {
+    position: absolute;
+    top: 5px;
+    right: 0px;
+    Width: 100%;
+    border-radius: 15px;
+    padding: 0px 3px;
+}
+
+.tabla-caracteristicas h1 {
+    font-size: 2rem;
+    color: #ff0303;
+    font-weight: 400;
+    text-align: center;
+}
+
+.tabla-caracteristicas h3 {
+    font-size: 1rem;
+    color: #f3eded;
+    font-weight: 300;
+    text-align: center;
 }
 
 .titulo-caracteristica {
@@ -298,19 +348,8 @@ section p {
 
 .valor-caracteristica {
     background-color: rgb(71, 64, 64);
-    border-radius: 5px;
+    border-radius: 3px;
 }
-
-.esconder {
-    display: none;
-}
-
-
-
-
-
-
-
 
 
 

@@ -41,14 +41,14 @@
       </div>
 
       <div class="botones-registro">
-        <button type="button" class="btn btn-secondary" id="sign-in">Sign in</button>
-        <button type="button" class="btn btn-secondary" id="sign-up">Sign Up</button>
+        <button type="button" class="btn btn-secondary" id="sign-in">Ingresar</button>
+        <button type="button" class="btn btn-secondary" id="sign-up">Registrarse</button>
       </div>
 
     </div>
 
     <!-- Nav Bar Bootstrap -->
-    <div>
+    <div class="botton-header">
       <ul class="nav nav-pills">
         <li class="nav-item">
           <a class="nav-link active enlace" id="autos-todos" aria-current="page" href="#">Ver Todos los Autos</a>
@@ -61,11 +61,15 @@
             <li><a class="dropdown-item enlace" id="autos-jeep" href="#">Jeep</a></li>
             <li><a class="dropdown-item enlace" id="autos-peugeot" href="#">Peugeot</a></li>
             <li><a class="dropdown-item enlace" id="autos-ford" href="#">Ford</a></li>
-            <li><hr class="dropdown-divider"></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
           </ul>
         </li>
-
       </ul>
+    </div>
+    <div>
+      <p class="login-usuario"> </p>
     </div>
 
   </header>
@@ -88,96 +92,88 @@
   <!-- ************************************************ Fin  Contenedor de elementos ************************* -->
 
 
+
   <!-- ************************************************ Inicio Seccion Cuadro Detalles de Auto **************** -->
   <!-- Seccion  caracteriticas adicionales de Auto  -->
-  <section class="Contenedor-Caracteristicas esconder" id="contenedor-caracteristicas">
-    <div class="tabla-caractericas" id="tabla-caracteristicas">
-      <h3 class="titulo-caracteristica">Color</h3>
-      <h3 class="valor-caracteristica">VALOR A IMPORTAR</h3>
-
-      <h3 class="titulo-caracteristica">Puertas</h3>
-      <h3 class="valor-caracteristica">VALOR A IMPORTAR</h3>
-
-      <h3 class="titulo-caracteristica">Motor</h3>
-      <h3 class="valor-caracteristica">VALOR A IMPORTAR</h3>
-
-      <h3 class="titulo-caracteristica">Transmision</h3>
-      <h3 class="valor-caracteristica">VALOR A IMPORTAR</h3>
-
-      <h3 class="titulo-caracteristica">Tipo Combustible</h3>
-      <h3 class="valor-caracteristica">VALOR A IMPORTAR</h3>
-
-      <h3 class="titulo-caracteristica">Kilometros</h3>
-      <h3 class="valor-caracteristica">VALOR A IMPORTAR</h3>
-    </div>
-
-    <div class="tabla-imagen" id="tabla-imagen">
-      <img src="multimedia/img1-jeep-renegade-nuevo.jfif" alt="">
-      <i class="fa-regular fa-rectangle-xmark cerrar"></i>
-      <button class="button-manu boton-agregar" id=""> Agregar a Favoritos</button>
-      <i class="fa-brands fa-whatsapp whatsApp-caracteristicas"></i>
-    </div>
+  <section class="modal" id="modal">
+    <!-- Aqui va ventana modal generada desde javascript -->
   </section>
   <!-- ************************************************ Inicio Seccion Cuadro Detalles de Auto ************************  -->
 
 
 
+
   <!-- ************************************************ Inicio Seccion Cuadro Amortizacion ************************** -->
-  <section class="contenedor-amortizacion">
-    <!-- Encabezado Tabla de Amortizacion -->
-    <!-- Titulo tabla de amortizacion -->
-    <h1 class="titulo-amortizacion">Tabla de Amortizacion</h1>
-    <div class="">
-      <div class="input-group flex-nowrap">
-        <span class="input-group-text" id="addon-wrapping">La tasa actual Aplicada para finaciamiento (TNA) es
-          de:</span>
-        <input type="text" class="form-control" id="tasa-finac" placeholder="Introducir tasa actual (TNA)"
-          aria-label="Username" aria-describedby="addon-wrapping">
+
+  <section class =" supercontenedor">
+    <div class="contenedor-amortizacion">
+      <!-- Titulo tabla de amortizacion -->
+      <h1 class="titulo-amortizacion">Tabla de Amortizacion</h1>
+      <!-- Encabezado Tabla de Amortizacion -->
+      <div class="">
+        <div class="input-group flex-nowrap">
+          <span class="input-group-text" id="addon-wrapping">La tasa actual Aplicada para finaciamiento (TNA) es
+            de:</span>
+          <input type="text" class="form-control" id="tasa-finac" placeholder="Introducir tasa actual (TNA)"
+            aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+        <div class="input-group flex-nowrap">
+          <span class="input-group-text" id="addon-wrapping">En cuantos años deseas financiar tu vehiculo?</span>
+          <input type="text" class="form-control" id="cant-agnos" placeholder="Introducir cantidad de años a finaciar"
+            aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+        <div class="input-group flex-nowrap">
+          <span class="input-group-text" id="addon-wrapping">Indica el valor del auto a financiar:</span>
+          <input type="text" class="form-control" id="valor-auto" placeholder="Valor del Auto" aria-label="Username"
+            aria-describedby="addon-wrapping">
+        </div>
+        <div class="input-group flex-nowrap">
+          <span class="input-group-text" id="addon-wrapping">Indica el valor del anticipo a entregar:</span>
+          <input type="text" class="form-control" id="monto-anticipo" placeholder="Monto del anticipo"
+            aria-label="Username" aria-describedby="addon-wrapping">
+        </div>
+        <div class="botones-simula">
+          <button type="button" class="btn btn-success" id="boton-simula-credito">Simular Credito</button>
+          <button type="button" class="btn btn-danger" id="boton-limpiar-campos">Limpiar</button>
+        </div>
       </div>
-      <div class="input-group flex-nowrap">
-        <span class="input-group-text" id="addon-wrapping">En cuantos años deseas financiar tu vehiculo?</span>
-        <input type="text" class="form-control" id="cant-agnos" placeholder="Introducir cantidad de años a finaciar"
-          aria-label="Username" aria-describedby="addon-wrapping">
+      <!-- Nombre columnas tabla amortizacion -->
+      <div  id="columnas-tabla-amortizacion">
+        <h2 class="columnas-tabla">Cuota</h2>
+        <h2 class="columnas-tabla">Saldo Inicial</h2>
+        <h2 class="columnas-tabla">Amortizacion de Capital</h2>
+        <h2 class="columnas-tabla">Interes</h2>
+        <h2 class="columnas-tabla">Saldo Final</h2>
       </div>
-      <div class="input-group flex-nowrap">
-        <span class="input-group-text" id="addon-wrapping">Indica el valor del auto a financiar:</span>
-        <input type="text" class="form-control" id="valor-auto" placeholder="Valor del Auto" aria-label="Username"
-          aria-describedby="addon-wrapping">
+      <!-- Cuerpo tabla de amortizacion -->
+      <div class="tabla-amortizacion" id="cuerpo-tabla-amortizacion">
+        <!-- aqui va el contenido generado por javaScript -->
       </div>
-      <div class="input-group flex-nowrap">
-        <span class="input-group-text" id="addon-wrapping">Indica el valor del anticipo a entregar:</span>
-        <input type="text" class="form-control" id="monto-anticipo" placeholder="Monto del anticipo"
-          aria-label="Username" aria-describedby="addon-wrapping">
-      </div>
-      <div class="botones-simula">
-        <button type="button" class="btn btn-success" id="boton-simula-credito">Simular Credito</button>
-        <button type="button" class="btn btn-danger" id="boton-limpiar-campos">Limpiar</button>
-      </div>
-    </div>
-    <!-- Nombre calumnas tabla amortizacion -->
-    <div class="tabla-amortizacion" id="columnas-tabla-amortizacion">
-      <h1>Cuota</h1>
-      <h1>Saldo Inicial</h1>
-      <h1>Amortizacion de Capital</h1>
-      <h1>Interes</h1>
-      <h1>Saldo Final</h1>
-    </div>
-    <!-- Cuerpo tabla de amortizacion -->
-    <div class="tabla-amortizacion" id="cuerpo-tabla-amortizacion">
-      <!-- aqui va el contenido generado por javaScript -->
     </div>
   </section>
+
+
+
+
   <!-- ************************************************ Fin Seccion Cuadro Amortizacion ************************  -->
 
 
-  <script src="script/users.js"></script>
-  <script src="script/arrayAutos.js"></script>
-  <!-- <script src="script/app.js"></script> -->
+  <!-- Scripts Sweetalert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
   <!-- Script Bootstrap -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+
+  <!--  Scripts Propios-->
+  <script src="script/users.js"></script>
+  <script src="script/arrayAutos.js"></script>
+
+
+
+
+
 
 </body>
 
